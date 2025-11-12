@@ -4,7 +4,15 @@
   "description": "Demo for A2 Gas solutino and LPG Demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./build && tsc",
+    "client": "cd client && npm start",
+    "server": "npx nodemon",
+    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "npm run build && node ./build/app.js",
+    "start:prod": "node app.js",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix"
   },
   "repository": {
     "type": "git",
