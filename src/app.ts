@@ -16,7 +16,7 @@ dotenv.config();
 const PORT: number = Number(process.env.PORT) || 60000;
 
 import db from './models/index';
-import routes from './routes/index';
+import routes from './routes'
 
 //setting port, listen for requests
 let port: number = PORT || 60000;
