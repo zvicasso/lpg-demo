@@ -6,7 +6,6 @@ const { Schema } = mongoose;
 // It retains the user's custom _id and toJSON configuration.
 const UserSchema = new Schema(
   {
-    _id: { type: String },
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     national_id: { type: String },

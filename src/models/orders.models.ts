@@ -7,7 +7,6 @@ const Schema = mongoose.Schema;
 
 const OrderSchema = new Schema(
   {
-    _id: { type: String },
     order_type: {
       type: String,
       enum: ["restock", "refill", "b2b", "b2c"],

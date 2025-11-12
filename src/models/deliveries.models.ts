@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 
 const DeliverySchema = new Schema(
   {
-    _id: { type: String },
     engineer: { type: String, ref: "User", required: true },
     customer: { type: String, ref: "User", required: true },
     cylinder: { type: String, ref: "Cylinder", required: true },

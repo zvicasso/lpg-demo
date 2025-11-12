@@ -6,7 +6,6 @@ const Schema = mongoose.Schema;
 // Tracks the lifecycle and current status of every single gas cylinder.
 const CylinderSchema = new Schema(
   {
-    _id: { type: String },
     serialNumber: { type: String, unique: true, required: true },
     current_owner: { type: String, ref: "Account" },
     status: {

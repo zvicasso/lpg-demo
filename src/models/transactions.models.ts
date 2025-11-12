@@ -6,7 +6,6 @@ const Schema = mongoose.Schema;
 
 const TransactionSchema = new Schema(
   {
-    _id: { type: String },
     type: { type: String, enum: ["sale", "purchase", "recycle"], required: true },
     amount: { type: Number },
     related_order: { type: String, ref: "Order" },
